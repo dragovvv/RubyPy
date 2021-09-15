@@ -1,44 +1,55 @@
 class Ruby():
 
-    #The Print Function(*Made By Dragovvv*)
-    def ruby_print_txt(text):
+    #The Print Function(*Made By Dragovvv and IT-Err0R*)
+    def ruby_print(text,type):
 
-        script = open("script.rb","a")
-        script.write(f'print "{text}" ')
-        script.close()
+        if type == "str":
+            script = open("script.rb","a")
+            script.write(f'print "{text}" \n')
+            script.close()
+
+        elif type == "int" or type == "float" or type == "var":
+            script = open("script.rb","a")
+            script.write(f'print {text} \n')
+            script.close()
+
+        else:
+            print("Worng Data Type")
         
     #The Puts Function(*Made By IT-Err0r*)
-    def ruby_print_Line_txt(text):
+    def ruby_print_Line(text,type):
         
-        script = open("script.rb","a")
-        script.write(f'puts "{text}" ')
-        script.close()
+        if type == "str":
+            script = open("script.rb","a")
+            script.write(f'puts "{text}" \n')
+            script.close()
 
-    #The Print Function(*Made By IT-Err0R*)
-    def ruby_print_num(number):
+        elif type == "int" or type == "float" or type == "var":
+            script = open("script.rb","a")
+            script.write(f'puts {text} \n')
+            script.close()
 
-        script = open("script.rb","a")
-        script.write(f'print {number} ')
-        script.close()
-        
-    #The Puts Function(*Made By IT-Err0r*)
-    def ruby_print_Line_num(number):
-        
-        script = open("script.rb","a")
-        script.write(f'puts {number} ')
-        script.close()
+        else:
+            print("Worng Data Type")
 
+    #The int Variable Function(*Made By IT-Err0r*)
+    def ruby_create_var(varname,value,type):
+        
+        if type == "int" or type == "float":
 
-    #The Variable Function(*Made By IT-Err0r*)
-    def ruby_var_int(varname,value: int):
+            script = open("script.rb","a")
+            script.write(f'{varname} = {value} \n')
+            script.close()
+
+        elif type == "str":
+
+            script = open("script.rb","a")
+            script.write(f'{varname} = "{value}" \n')
+            script.close()
+
+    #The Comments Function(*Made By IT-Err0R*)
+    def ruby_comment(cmnt):
         
         script = open("script.rb","a")
-        script.write(f'{varname} = {value} ')
-        script.close()
-        
-    #The Print Var Function(*Made By IT-Err0r*)
-    def ruby_var_str(varname,value: str):
-        
-        script = open("script.rb","a")
-        script.write(f'{varname} = "{value}" ')
+        script.write(f'#{cmnt}\n')
         script.close()
