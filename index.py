@@ -1,6 +1,8 @@
+#Made By IT-Err0r And Dragovvv
+
 class Ruby():
 
-    #The Print Function(*Made By Dragovvv and IT-Err0R*)
+    #The Print Function
     def ruby_print(text,type):
 
         if type == "str":
@@ -16,7 +18,7 @@ class Ruby():
         else:
             print("Worng Data Type")
         
-    #The Puts Function(*Made By IT-Err0r*)
+    #The Puts Function
     def ruby_print_Line(text,type):
         
         if type == "str":
@@ -32,7 +34,7 @@ class Ruby():
         else:
             print("Worng Data Type")
 
-    #The int Variable Function(*Made By IT-Err0r*)
+    #The int Variable Function
     def ruby_create_var(varname,value,type):
         
         if type == "int" or type == "float":
@@ -47,7 +49,7 @@ class Ruby():
             script.write(f'{varname} = "{value}" \n')
             script.close()
 
-    #The Comments Function(*Made By IT-Err0R*)
+    #The Comments Function
     def ruby_comment(cmnt):
         
         script = open("script.rb","a")
